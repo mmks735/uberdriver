@@ -1,0 +1,356 @@
+/**
+ * VINCYUBER Documentation - Custom CSS
+ * Brand color: Green #2E7D32
+ */
+
+:root {
+  --ifm-color-primary: #2E7D32;
+  --ifm-color-primary-dark: #27662a;
+  --ifm-color-primary-darker: #245f28;
+  --ifm-color-primary-darkest: #1b4e20;
+  --ifm-color-primary-light: #35913a;
+  --ifm-color-primary-lighter: #389a3d;
+  --ifm-color-primary-lightest: #43af49;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+
+  --vincyuber-green: #2E7D32;
+  --vincyuber-green-light: #4CAF50;
+  --vincyuber-green-pale: #E8F5E9;
+  --vincyuber-gray: #f5f5f5;
+}
+
+[data-theme='dark'] {
+  --ifm-color-primary: #4CAF50;
+  --ifm-color-primary-dark: #43a047;
+  --ifm-color-primary-darker: #388e3c;
+  --ifm-color-primary-darkest: #2E7D32;
+  --ifm-color-primary-light: #66bb6a;
+  --ifm-color-primary-lighter: #81c784;
+  --ifm-color-primary-lightest: #a5d6a7;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+/* ============ HERO BANNER ============ */
+.hero--vincyuber {
+  background: linear-gradient(135deg, #1B5E20 0%, #2E7D32 40%, #388E3C 100%);
+  color: white;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.hero--vincyuber .hero__title {
+  font-size: 3rem;
+  font-weight: 800;
+  color: white;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.hero--vincyuber .hero__subtitle {
+  font-size: 1.2rem;
+  color: rgba(255,255,255,0.9);
+  max-width: 600px;
+  margin: 0 auto 2rem;
+}
+
+/* ============ SCREEN CARDS ============ */
+.screen-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.screen-card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: 1px solid #e8f5e9;
+}
+
+.screen-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(46,125,50,0.15);
+}
+
+.screen-card__img-wrap {
+  background: #f8f9fa;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+}
+
+.screen-card__img-wrap img {
+  max-height: 340px;
+  width: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+.screen-card__body {
+  padding: 1rem 1.25rem 1.25rem;
+}
+
+.screen-card__title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1B5E20;
+  margin: 0 0 0.4rem;
+}
+
+.screen-card__desc {
+  font-size: 0.85rem;
+  color: #555;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* ============ PHONE MOCKUP ============ */
+.phone-mockup-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.phone-mockup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.phone-mockup__frame {
+  background: #1a1a1a;
+  border-radius: 32px;
+  padding: 10px;
+  box-shadow: 0 16px 48px rgba(0,0,0,0.25);
+  max-width: 200px;
+}
+
+.phone-mockup__frame img {
+  border-radius: 24px;
+  width: 100%;
+  display: block;
+}
+
+.phone-mockup__label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--vincyuber-green);
+  text-align: center;
+  background: var(--vincyuber-green-pale);
+  padding: 4px 12px;
+  border-radius: 20px;
+}
+
+/* ============ FEATURE BADGES ============ */
+.feature-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.badge--green {
+  background: var(--vincyuber-green-pale);
+  color: var(--vincyuber-green);
+  border: 1px solid #c8e6c9;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+/* ============ SCREEN DETAIL TABLE ============ */
+.table-container {
+  overflow-x: auto;
+  margin: 1.5rem 0;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+thead tr {
+  background: var(--vincyuber-green) !important;
+  color: white !important;
+}
+
+thead th {
+  padding: 12px 16px;
+  font-weight: 600;
+  color: white !important;
+}
+
+tbody tr:nth-child(even) {
+  background: var(--vincyuber-green-pale);
+}
+
+tbody td {
+  padding: 10px 16px;
+  border-bottom: 1px solid #e8f5e9;
+}
+
+/* ============ STEP FLOW ============ */
+.step-flow {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin: 2rem 0;
+}
+
+.step-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  position: relative;
+  padding-bottom: 1.5rem;
+}
+
+.step-item::before {
+  content: '';
+  position: absolute;
+  left: 20px;
+  top: 40px;
+  bottom: 0;
+  width: 2px;
+  background: #c8e6c9;
+}
+
+.step-item:last-child::before {
+  display: none;
+}
+
+.step-number {
+  width: 40px;
+  height: 40px;
+  background: var(--vincyuber-green);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+
+.step-content {
+  padding-top: 8px;
+}
+
+.step-content h4 {
+  margin: 0 0 0.25rem;
+  color: #1B5E20;
+}
+
+.step-content p {
+  margin: 0;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+/* ============ CALLOUT BOXES ============ */
+.callout {
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0;
+  border-left: 4px solid;
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+}
+
+.callout--info {
+  background: #e3f2fd;
+  border-color: #1976d2;
+  color: #0d47a1;
+}
+
+.callout--success {
+  background: var(--vincyuber-green-pale);
+  border-color: var(--vincyuber-green);
+  color: #1B5E20;
+}
+
+.callout--warning {
+  background: #fff8e1;
+  border-color: #f57f17;
+  color: #e65100;
+}
+
+.callout__icon {
+  font-size: 1.2rem;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* ============ NAVBAR ============ */
+.navbar {
+  box-shadow: 0 2px 12px rgba(46,125,50,0.12);
+}
+
+/* ============ SIDEBAR ============ */
+.menu__link--active {
+  font-weight: 700;
+}
+
+/* ============ FOOTER ============ */
+.footer {
+  background: #1B5E20;
+}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width: 768px) {
+  .screen-grid {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  }
+
+  .phone-mockup-row {
+    gap: 1rem;
+  }
+
+  .hero--vincyuber .hero__title {
+    font-size: 2rem;
+  }
+}
+
+/* ============ ARTBOARD & FLOW BANNERS ============ */
+.artboard-container {
+  margin: 1.5rem 0 2rem;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e0e0e0;
+  background: #fdfdfd;
+}
+
+.artboard-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.artboard-caption {
+  padding: 0.75rem 1.25rem;
+  background: #f8fafc;
+  border-top: 1px solid #e2e8f0;
+  font-size: 0.85rem;
+  color: #64748b;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+

@@ -117,3 +117,16 @@ app.*.symbols
 !**/ios/**/default.perspectivev3
 !/packages/flutter_tools/test/data/dart_dependencies_test/**/.packages
 !/dev/ci/**/Gemfile.lock
+
+# Node & Docusaurus
+node_modules/
+.docusaurus/
+build/
+.cache-loader
+.DS_Store
+*.log
+
+# Local app source and reference folders
+vincy-uber-driver-app/
+Vincyuber/
+uberuser/

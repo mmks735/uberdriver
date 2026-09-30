@@ -1,0 +1,11 @@
+{
+  // This file is not used in compiling JavaScript when using Docusaurus.
+  // It is used in type checking (tsc) and by your editor for better DX.
+  "extends": "@docusaurus/tsconfig",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@site/*": ["./*"]
+    }
+  }
+}
